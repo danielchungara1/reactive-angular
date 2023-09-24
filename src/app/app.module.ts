@@ -78,7 +78,6 @@ import {LoadingService} from "./loading/loading.service";
     ReactiveFormsModule
   ],
   providers: [
-    LoadingService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingInterceptor,
