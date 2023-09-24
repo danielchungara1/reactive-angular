@@ -3,8 +3,9 @@ import {Course, sortCoursesBySeqNo} from '../model/course';
 import {HttpClient} from '@angular/common/http';
 import {MatDialog} from '@angular/material/dialog';
 import {CourseService} from "../services/course.service";
-import {Observable} from "rxjs";
-import {map} from "rxjs/operators";
+import {Observable, throwError} from "rxjs";
+import {catchError, map} from "rxjs/operators";
+import {MessageService} from "../messages/message.service";
 
 
 @Component({
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit {
     private http: HttpClient,
     private dialog: MatDialog,
     private courseService: CourseService,
+    private messageService: MessageService
   ) {
   }
 
@@ -34,6 +36,12 @@ export class HomeComponent implements OnInit {
   reloadList($event: any) {
     const courses$ = this.courseService.loadAllCourses().pipe(
       map(courses => courses.sort(sortCoursesBySeqNo)),
+      catchError(err => {
+        const message = "Could not load courses";
+        this.messageService.showErrors(message);
+        console.log(message, err);
+        return throwError(err);
+      })
     );
     this.beginnerCourses$ = courses$.pipe(
       map(course => course.filter(course => course.category == "BEGINNER"))
