@@ -51,6 +51,8 @@
 
   </mat-toolbar>
 
+  <loading *ngIf="loadingService.loading$ | async"></loading>
+
   <router-outlet></router-outlet>
 
 </mat-sidenav-container>

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {LoadingService} from "./loading/loading.service";
 
 
 
@@ -9,7 +10,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements  OnInit {
 
-    constructor() {
+    constructor(
+      protected loadingService: LoadingService
+    ) {
 
     }
 
