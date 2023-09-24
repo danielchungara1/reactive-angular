@@ -4,10 +4,9 @@ import {LoadingService} from "./loading/loading.service";
 import {Observable} from "rxjs";
 import {finalize} from "rxjs/operators";
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class LoadingInterceptor implements HttpInterceptor {
   constructor(private loadingService: LoadingService) {}
 
