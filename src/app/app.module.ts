@@ -36,6 +36,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 import {LoadingInterceptor} from "./loading-interceptor.service";
 import {LoadingService} from "./loading/loading.service";
+import {MessageService} from "./messages/message.service";
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import {LoadingService} from "./loading/loading.service";
       useClass: LoadingInterceptor,
       multi: true,
     },
+    MessageService,
   ],
   bootstrap: [AppComponent]
 })
