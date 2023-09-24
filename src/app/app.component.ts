@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {LoadingService} from "./loading/loading.service";
 import {MessageService} from "./messages/message.service";
+import {AuthStoreService} from "./services/auth-store.service";
+import {Router} from "@angular/router";
 
 
 
@@ -12,6 +14,8 @@ import {MessageService} from "./messages/message.service";
 export class AppComponent implements  OnInit {
 
     constructor(
+      protected authStore: AuthStoreService,
+      private router: Router
     ) {
 
     }
@@ -22,7 +26,8 @@ export class AppComponent implements  OnInit {
     }
 
   logout() {
-
+      this.authStore.logout();
+      this.router.navigateByUrl('login')
   }
 
 }
