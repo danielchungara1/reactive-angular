@@ -10,6 +10,7 @@ export class LoadingComponent implements OnInit {
 
 
   constructor(
+    protected loadingService: LoadingService
   ) {
 
   }

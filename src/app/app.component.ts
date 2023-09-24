@@ -11,7 +11,6 @@ import {LoadingService} from "./loading/loading.service";
 export class AppComponent implements  OnInit {
 
     constructor(
-      protected loadingService: LoadingService
     ) {
 
     }

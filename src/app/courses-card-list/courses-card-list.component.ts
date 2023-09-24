@@ -28,11 +28,11 @@ export class CoursesCardListComponent {
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;    const dialogRef = this.dialog.open(CourseDialogComponent, dialogConfig);
-
+    dialogConfig.autoFocus = true;
     dialogConfig.width = "400px";
-
     dialogConfig.data = course;
+
+    const dialogRef = this.dialog.open(CourseDialogComponent, dialogConfig);
 
     dialogRef.afterClosed()
       .pipe(
