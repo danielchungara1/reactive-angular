@@ -40,6 +40,7 @@ import {MessageService} from "./messages/message.service";
 import { ProductsComponent } from './products/products.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import { ProductPaginatorComponent } from './products/product-paginator/product-paginator.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     LoadingComponent,
     CoursesCardListComponent,
     ProductsComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductPaginatorComponent
 
   ],
     imports: [

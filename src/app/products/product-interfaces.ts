@@ -11,3 +11,10 @@ export interface Product {
   sold_quantity: string;
 
 }
+
+export interface ProductPage {
+  total: string;
+  primary_results: string;
+  offset: string;
+  limit: string;
+}
