@@ -1,0 +1,22 @@
+
+.responsive-card {
+  /* Estilos personalizados para la tarjeta */
+  max-width: 250px; /* Ajusta el valor máximo según tus necesidades */
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Hacer la imagen dentro de la tarjeta responsive */
+.responsive-card img {
+  width: 50%; /* La imagen ocupará el 100% del ancho de la tarjeta */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.title {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+
+.price {
+  font-weight: bolder;
+}

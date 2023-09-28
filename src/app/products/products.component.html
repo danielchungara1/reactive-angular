@@ -25,19 +25,21 @@
       </mat-select>
     </mat-form-field>
 
-    <mat-card class="responsive-card" *ngIf="productSelected">
-      <!-- Imagen -->
-      <img mat-card-image [src]="productSelected.thumbnail" alt="Descripción de la imagen">
+    <product-list [productList]="products$ | async"></product-list>
 
-      <!-- Contenido de la tarjeta -->
-      <mat-card-content>
-        <!-- Título -->
-        <h2 mat-card-title>{{productSelected.title}}</h2>
+<!--    <mat-card class="responsive-card" *ngIf="productSelected">-->
+<!--      &lt;!&ndash; Imagen &ndash;&gt;-->
+<!--      <img mat-card-image [src]="productSelected.thumbnail" alt="Descripción de la imagen">-->
 
-        <!-- Precio -->
-        <p mat-card-subtitle>Precio: $ {{productSelected.price}}</p>
-      </mat-card-content>
-    </mat-card>
+<!--      &lt;!&ndash; Contenido de la tarjeta &ndash;&gt;-->
+<!--      <mat-card-content>-->
+<!--        &lt;!&ndash; Título &ndash;&gt;-->
+<!--        <h2 mat-card-title>{{productSelected.title}}</h2>-->
+
+<!--        &lt;!&ndash; Precio &ndash;&gt;-->
+<!--        <p mat-card-subtitle>Precio: $ {{productSelected.price}}</p>-->
+<!--      </mat-card-content>-->
+<!--    </mat-card>-->
 
     <pre>{{ simpleForm.value | json }}</pre>
 

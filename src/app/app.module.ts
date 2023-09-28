@@ -38,6 +38,8 @@ import {LoadingInterceptor} from "./services/loading-interceptor.service";
 import {LoadingService} from "./loading/loading.service";
 import {MessageService} from "./messages/message.service";
 import { ProductsComponent } from './products/products.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -53,33 +55,35 @@ import { ProductsComponent } from './products/products.component';
     SearchLessonsComponent,
     LoadingComponent,
     CoursesCardListComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductListComponent
 
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MatTabsModule,
-    MatSidenavModule,
-    MatListModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatProgressSpinnerModule,
-    MatDialogModule,
-    AppRoutingModule,
-    MatSelectModule,
-    MatDatepickerModule,
-    MatMomentDateModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatMenuModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        MatTabsModule,
+        MatSidenavModule,
+        MatListModule,
+        MatToolbarModule,
+        MatInputModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatProgressSpinnerModule,
+        MatDialogModule,
+        AppRoutingModule,
+        MatSelectModule,
+        MatDatepickerModule,
+        MatMomentDateModule,
+        ReactiveFormsModule,
+        MatGridListModule
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

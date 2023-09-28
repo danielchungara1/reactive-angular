@@ -7,16 +7,3 @@
 .full-width {
   width: 100%;
 }
-
-.responsive-card {
-  /* Estilos personalizados para la tarjeta */
-  max-width: 200px; /* Ajusta el valor máximo según tus necesidades */
-  margin: 10px;
-  border: 1px solid #ccc;
-}
-
-/* Hacer la imagen dentro de la tarjeta responsive */
-.responsive-card img {
-  width: 100%; /* La imagen ocupará el 100% del ancho de la tarjeta */
-  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
-}

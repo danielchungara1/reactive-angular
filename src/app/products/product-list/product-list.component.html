@@ -1,0 +1,20 @@
+<mat-grid-list cols="4" gutterSize="16px">
+
+  <mat-grid-tile *ngFor="let product of productList">
+    <mat-card class="responsive-card">
+      <!-- Imagen -->
+      <img mat-card-image [src]="product.thumbnail" alt="Descripción de la imagen">
+
+      <!-- Contenido de la tarjeta -->
+      <mat-card-content>
+        <!-- Título -->
+        <h2 class="title" mat-card-title>{{product.title}}</h2>
+
+        <!-- Precio -->
+        <p class="price" mat-card-subtitle>Precio: $ {{product.price}}</p>
+      </mat-card-content>
+    </mat-card>
+
+  </mat-grid-tile>
+
+</mat-grid-list>
