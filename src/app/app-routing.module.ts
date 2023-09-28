@@ -5,13 +5,9 @@ import {AboutComponent} from './about/about.component';
 import {CourseComponent} from './course/course.component';
 import {LoginComponent} from './login/login.component';
 import {SearchLessonsComponent} from './search-lessons/search-lessons.component';
+import {ProductsComponent} from "./products/products.component";
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-
-  },
   {
     path:"search-lessons",
     component: SearchLessonsComponent
@@ -27,6 +23,15 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'products',
+    component: ProductsComponent
+  },
+  {
+    path: '',
+    component: ProductsComponent
+
   },
   {
     path: '**',

@@ -37,6 +37,7 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
 import {LoadingInterceptor} from "./services/loading-interceptor.service";
 import {LoadingService} from "./loading/loading.service";
 import {MessageService} from "./messages/message.service";
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {MessageService} from "./messages/message.service";
     MessagesComponent,
     SearchLessonsComponent,
     LoadingComponent,
-    CoursesCardListComponent
+    CoursesCardListComponent,
+    ProductsComponent
 
   ],
   imports: [

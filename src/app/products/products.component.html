@@ -1,0 +1,47 @@
+<div class="basic-container">
+  <form [formGroup]="simpleForm">
+
+    <!-- TODO: MOVER A UN COMPONENTE GENERICO  -->
+    <mat-form-field class="full-width" >
+      <mat-label>Selecciona una categoria</mat-label>
+      <mat-select formControlName="categoryId">
+        <ng-container *ngIf="categories$ | async as categories">
+          <mat-option *ngFor="let category of categories" [value]="category.id" (click)="onCategorySelected(category)">
+            {{ category.name }}
+          </mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- TODO: MOVER A UN COMPONENTE GENERICO  -->
+    <mat-form-field class="full-width" >
+      <mat-label>Selecciona un producto</mat-label>
+      <mat-select formControlName="productId">
+        <ng-container *ngIf="products$ | async as products">
+          <mat-option *ngFor="let product of products" [value]="product.id" (click)="onProductSelected(product)">
+            {{ product.title }}
+          </mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-card class="responsive-card" *ngIf="productSelected">
+      <!-- Imagen -->
+      <img mat-card-image [src]="productSelected.thumbnail" alt="Descripción de la imagen">
+
+      <!-- Contenido de la tarjeta -->
+      <mat-card-content>
+        <!-- Título -->
+        <h2 mat-card-title>{{productSelected.title}}</h2>
+
+        <!-- Precio -->
+        <p mat-card-subtitle>Precio: $ {{productSelected.price}}</p>
+      </mat-card-content>
+    </mat-card>
+
+    <pre>{{ simpleForm.value | json }}</pre>
+
+
+  </form>
+
+</div>
