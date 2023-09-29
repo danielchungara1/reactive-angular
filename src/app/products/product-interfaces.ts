@@ -12,7 +12,7 @@ export interface Product {
 
 }
 
-export interface ProductPage {
+export interface PageMetadata {
   total: string;
   primary_results: string;
   offset: string;

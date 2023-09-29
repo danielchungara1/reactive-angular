@@ -1,9 +1,24 @@
-<ng-container *ngIf="productPage$ | async as productPage">
-<!--  <pre>{{ productPage | json }}</pre>-->
-  <span *ngFor="let nroPagina of getArrayNrosPaginas(productPage)">
-    <button mat-raised-button color="primary" class="rounded-button">
-      {{ nroPagina }}
-    </button>
-  </span>
-</ng-container>
+<div class="simple-paginator">
+  <button mat-raised-button color="primary" class="rounded-button" (click)="onClickFirst()" [disabled]="isFirstPage">
+    First
+  </button>
+  <button mat-raised-button color="primary" class="rounded-button" (click)="onClickPreview()" [disabled]="isFirstPage">
+    Preview
+  </button>
+  <button mat-raised-button color="primary" class="rounded-button" (click)="onClickNext()" [disabled]="isLastPage">
+    Next
+  </button>
+  <button mat-raised-button color="primary" class="rounded-button" (click)="onClickLast()" [disabled]="isLastPage">
+    Last
+  </button>
+</div>
+
+
+<!--<ng-container *ngIf="pageMetadata$ | async as productPage">-->
+<!--  <span *ngFor="let nroPagina of getArrayNrosPaginas(productPage)">-->
+<!--    <button mat-raised-button color="primary" class="rounded-button">-->
+<!--      {{ nroPagina }}-->
+<!--    </button>-->
+<!--  </span>-->
+<!--</ng-container>-->
 

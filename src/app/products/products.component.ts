@@ -29,9 +29,11 @@ export class ProductsComponent implements OnInit {
 
     this.simpleForm.get('categoryId').valueChanges.subscribe((value) => {
       if (value) {
-        this.products$ = this.productService.searchProductsByCategory({id: value, name: ''})
+        this.productService.searchProductsByCategory({id: value, name: ''}, 0)
       }
     });
+
+    this.products$ = this.productService.productList$;
 
   }
 
